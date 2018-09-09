@@ -1,42 +1,28 @@
-
+var playBongo = function(squareNum) {
+  if (squareNum === "0"){
+    var audio = document.getElementById("bongo1");
+    audio.play(); 
+  }
+  if (squareNum === "1") {
+    var audio = document.getElementById("bongo2");
+    audio.play();
+  }
+  if (squareNum === "2") {
+    var audio = document.getElementById("bongo3");
+    audio.play();
+  }
+  if (squareNum === "3") {
+    var audio = document.getElementById("bongo4");
+    audio.play();
+  }
+  else {
+    var audio = document.getElementById("bongo5");
+    audio.play(); 
+  }
+}
 $(document).ready(function () {
   $(".game-square").click(function () {
-    var squareId = parseInt($(this).attr('id'));
-    if (gameBoard[squareId].owner === "") {
-      if (playerOne.turn === true) {
-        gameBoard[squareId].owner = playerOne.symbol;
-        $(this).css("background-size", "contain");
-        $(this).css("background-image", "url('img/imageX.png')");
-        playerOne.owns.push(squareId);
-        if (winCondition1()) {
-          alert(playerOne.name + ' wins!');
-          reInitialize();
-        } else if (tie()) {
-          alert("You tied!");
-          reInitialize();
-          $(".game-square").css("background-image", "");
-        } else {
-          switchTurn();
-        }
-      } else {
-        gameBoard[squareId].owner = playerTwo.symbol;
-        $(this).css("background-size", "contain");
-        $(this).css("background-image", "url('img/imageO.png')");
-        playerTwo.owns.push(squareId);
-        if (winCondition2()) {
-          alert(playerTwo.name + ' wins!');
-          $(".game-square").css("background-image", "");
-          reInitialize();
-        } else if (tie()) {
-          alert("You tied!");
-          reInitialize();
-          $(".game-square").css("background-image", "");
-        } else {
-          switchTurn();
-        }
-      }
-    } else {
-      alert("That square is already taken!");
-    }
+    var squareId = $(this).attr('id');
+    playBongo(squareId);
   });
 });
