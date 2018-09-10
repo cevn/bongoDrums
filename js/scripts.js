@@ -1,33 +1,3 @@
-var playBongo = function(squareNum) {
-  if (squareNum === "0"){
-    var audio = document.getElementById('bongo1');
-    audio.currentTime = 0;
-    audio.play(); 
-  }
-  if (squareNum === "1") {
-    var audio = document.getElementById('bongo2');
-    audio.currentTime = 0;
-    audio.play();
-  }
-  if (squareNum === "2") {
-    var audio = document.getElementById('bongo3');
-    audio.currentTime = 0;
-    audio.play(); 
-    
-  }
-  if (squareNum === "3") {
-    var audio = document.getElementById('bongo4');
-    audio.currentTime = 0;
-    audio.play();
-  }
-  if(squareNum === "4") {
-    var audio = document.getElementById('bongo5');
-    audio.currentTime = 0;
-    audio.play(); 
-  }
-
-
-}
 $(document).ready(function () {
 
   document.addEventListener('keydown', function (event) {
@@ -96,7 +66,7 @@ $(document).ready(function () {
       borderElement.style.color = "black";
     }
     if (event.which == 57) {
-      var audio = document.getElementById('bongo5');
+      var audio = document.getElementById('bongo9');
       audio.currentTime = 0;
       audio.play();
       var borderElement = document.getElementById('8');
