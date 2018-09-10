@@ -50,17 +50,15 @@ $(document).ready(function () {
       borderElement.style.color = "black";
     }
     if (event.which == 55) {
-      var audio = document.getElementById('bongo5');
-      audio.currentTime = 0;
+      var audio = document.getElementById('bongo9');
       audio.play();
       var borderElement = document.getElementById('6');
       borderElement.style.border = "3px solid black";
       borderElement.style.color = "black";
     }
     if (event.which == 56) {
-      var audio = document.getElementById('bongo5');
-      audio.currentTime = 0;
-      audio.play();
+      var audio = document.getElementById('bongo9');
+      audio.pause(); 
       var borderElement = document.getElementById('7');
       borderElement.style.border = "3px solid black";
       borderElement.style.color = "black";

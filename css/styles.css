@@ -11,6 +11,9 @@
   height: 120px; /* Fix height to equal width */
   font-size: 50px;
 }
+.smallWriting {
+  font-size: 20px; 
+}
 
 body {
   background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
